@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+             xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="
+        http://java.sun.com/xml/ns/persistence
+        http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+    <persistence-unit name="biblioteca-datasource">
+
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <jta-data-source>java:/datasources/BibliotecaDS</jta-data-source>
+        <class>org.expertojava.jbibrest.modelo.Alumno</class>
+        <class>org.expertojava.jbibrest.modelo.Ejemplar</class>
+        <class>org.expertojava.jbibrest.modelo.Multa</class>
+        <class>org.expertojava.jbibrest.modelo.MultaHistorica</class>
+        <class>org.expertojava.jbibrest.modelo.Prestamo</class>
+        <class>org.expertojava.jbibrest.modelo.PrestamoHistorico</class>
+        <class>org.expertojava.jbibrest.modelo.Profesor</class>
+        <class>org.expertojava.jbibrest.modelo.Usuario</class>
+        <class>org.expertojava.jbibrest.modelo.Libro</class>
+        <class>org.expertojava.jbibrest.modelo.Recomendacion</class>
+
+        <properties>
+            <property name="hibernate.id.new_generator_mappings" value="false"/>
+            <property name="hibernate.dialect"
+                      value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="create" />
+            <property name="hibernate.show_sql" value="true" />
+        </properties>
+    </persistence-unit>
+</persistence>

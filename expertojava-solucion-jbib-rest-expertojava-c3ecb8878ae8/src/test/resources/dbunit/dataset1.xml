@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+    <Libro id="1" titulo="Patterns Of Enterprise Application Architecture"
+           autor="Martin Fowler" isbn="0321127420" numPaginas="533" portadaURI="0321127420.jpg"/>
+    <Libro id="2" titulo="Clean Code" autor="Robert C. Martin"
+           isbn="0132350882" numPaginas="288" portadaURI="0132350882.jpg"/>
+    <Libro id="3" titulo="Test Driven Development" autor="Kent Beck"
+           isbn="0321146530" numPaginas="192" portadaURI="0321146530.jpg"/>
+    <Libro id="4" titulo="Extreme Programming Explained" autor="Kent Beck"
+           isbn="0321278658" numPaginas="224" portadaURI="0321278658.jpg"/>
+    <Libro id="5" titulo="The Art of Computer Programming" autor="Donald E. Knuth"
+           isbn="0201896834" numPaginas="144" portadaURI="0321278658.jpg"/>
+
+    <Recomendacion id="1" libro_id="2" libroRelacionado_id = "3"/>
+    <Recomendacion id="2" libro_id="2" libroRelacionado_id = "1"/>
+    <Recomendacion id="3" libro_id="3" libroRelacionado_id = "2"/>
+</dataset>

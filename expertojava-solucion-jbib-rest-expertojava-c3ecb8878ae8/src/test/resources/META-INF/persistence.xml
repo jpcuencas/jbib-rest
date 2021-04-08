@@ -1,0 +1,42 @@
+<persistence version="2.1"
+             xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence">
+
+    <persistence-unit name="biblioteca-local"
+                      transaction-type="RESOURCE_LOCAL">
+
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <class>org.expertojava.jbibrest.modelo.Libro</class>
+        <class>org.expertojava.jbibrest.modelo.Recomendacion</class>
+        <class>org.expertojava.jbibrest.modelo.Alumno</class>
+        <class>org.expertojava.jbibrest.modelo.Ejemplar</class>
+        <class>org.expertojava.jbibrest.modelo.Multa</class>
+        <class>org.expertojava.jbibrest.modelo.MultaHistorica</class>
+        <class>org.expertojava.jbibrest.modelo.Prestamo</class>
+        <class>org.expertojava.jbibrest.modelo.PrestamoHistorico</class>
+        <class>org.expertojava.jbibrest.modelo.Profesor</class>
+        <class>org.expertojava.jbibrest.modelo.Usuario</class>
+
+        <properties>
+
+            <!-- JPA properties -->
+            <property name="javax.persistence.jdbc.driver"
+                      value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url"
+                      value="jdbc:mysql://localhost:3306/biblioteca"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password"
+                      value="expertojava"/>
+
+            <!-- Hibernate properties -->
+            <property name="hibernate.dialect"
+                      value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="false"/>
+
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
+        </properties>
+    </persistence-unit>
+</persistence>

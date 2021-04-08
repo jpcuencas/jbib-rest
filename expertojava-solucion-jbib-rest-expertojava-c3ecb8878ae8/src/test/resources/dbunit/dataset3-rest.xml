@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+
+    <!-- Libros -->
+
+    <Libro id="1" titulo="Patterns Of Enterprise Application Architecture"
+           autor="Martin Fowler" isbn="0321127420" numPaginas="533" portadaURI="0321127420.jpg"/>
+    <Libro id="2" titulo="Clean Code" autor="Robert C. Martin"
+           isbn="0132350882" numPaginas="288" portadaURI="0132350882.jpg"/>
+    <Libro id="3" titulo="Test Driven Development" autor="Kent Beck"
+           isbn="0321146530" numPaginas="192" portadaURI="0321146530.jpg"/>
+
+    <!-- Recomendaciones -->
+
+    <Recomendacion id="1" libro_id="2" libroRelacionado_id = "3"/>
+    <Recomendacion id="2" libro_id="2" libroRelacionado_id = "1"/>
+    <Recomendacion id="3" libro_id="3" libroRelacionado_id = "2"/>
+
+    <!-- Usuarios -->
+
+    <Usuario id="1" tipo="PROFESOR" login="vicente.casamayor" nombre="Vicente"
+             apellido1="Casamayor" apellido2="rodriguez"/>
+    <Usuario id="2" tipo="ALUMNO" login="antonio.perez" nombre="Antonio"
+             apellido1="Pérez" apellido2="Martínez"/>
+    <Usuario id="3" tipo="ALUMNO" login="anabel.garcia" nombre="Anabel"
+             apellido1="Garcia" apellido2="Sierra"/>
+
+    <!-- Ejemplares -->
+
+    <Ejemplar id="1" codigoEjemplar="001" fechaAdquisicion="2014-10-01"
+              libroId="1"/>
+    <Ejemplar id="2" codigoEjemplar="002" fechaAdquisicion="2014-10-01"
+              libroId="1"/>
+    <Ejemplar id="3" codigoEjemplar="001" fechaAdquisicion="2014-11-01"
+              libroId="2"/>
+    <Ejemplar id="4" codigoEjemplar="001" fechaAdquisicion="2014-11-21"
+              libroId="3"/>
+
+
+    <!-- Prestamos activos -->
+
+    <Prestamo id="2" ejemplar_id="4" usuario_id="2" fecha="2014-12-01"
+              deberiaDevolverseEl="2014-12-05"/>
+    <Prestamo id="3" ejemplar_id="2" usuario_id="1" fecha="2014-11-01"
+              deberiaDevolverseEl="2014-11-30"/>
+    <Prestamo id="4" ejemplar_id="3" usuario_id="1" fecha="2014-11-01"
+              deberiaDevolverseEl="2014-11-30"/>
+
+    <!-- Multas -->
+
+    <Multa id="1" desde="2014-12-02" hasta="2015-12-12" usuario_id="2"/>
+
+</dataset>
